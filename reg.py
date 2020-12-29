@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import sys
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome('/opt/chromedriver')  # Optional argument, if not specified will search path.
 driver.get('https://initiativeq.com/invite/NRacuKyH4')
 print("Sleep 5s ....")
 time.sleep(5)
@@ -34,6 +34,5 @@ input_psw.send_keys("luongQ1!")
 
 sign_up_btn = first_form.find_element_by_xpath(".//button")
 sign_up_btn.click()
-
 
 
